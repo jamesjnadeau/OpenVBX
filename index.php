@@ -154,6 +154,13 @@ else
 	define('APPPATH', BASEPATH.$application_folder.'/');
 }
 
+
+//Polyfill curl
+//include_once('myCurl.php');
+if (!function_exists('curl_init')) {
+	require_once $application_folder.'/libraries/Purl/Purl.php';
+}
+
 /*
  |---------------------------------------------------------------
  | LOAD THE FRONT CONTROLLER
