@@ -316,9 +316,9 @@ class OpenVBX {
 											);
 						$service = new Services_Twilio(
 												$twilio_sid, 
-												$twilio_token,
-												$api_version,
-												$_http
+												$twilio_token
+												//$api_version
+												//$_http
 											);
 						return $service->account;
 					}
@@ -344,9 +344,9 @@ class OpenVBX {
 									);
 				self::$_twilioService = new Services_Twilio(
 													$ci->twilio_sid, 
-													$ci->twilio_token,
-													$api_version,
-													$_http
+													$ci->twilio_token
+													//$api_version,
+													//$_http
 												);
 			}
 			catch (Exception $e) {
